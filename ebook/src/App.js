@@ -26,14 +26,29 @@ function App() {
       <div className="content">
         <section>
         <h1>Cadastro de Livros</h1>
-            <p>Cadastro!</p>
+            <h3>Cadastro!</h3>
             <div className='scrollable-tbody'>
             <table>
             <thead>
               <tr>
-                <th>Nome do Livro </th>
-                <th>Nome do Autor </th>
-                <th>Ano de Publicação </th>
+                <h4>Nome do Livro </h4>
+                <input 
+                placeholder="Nome do Livro"
+                value={nomeLivro}
+                onChange={ e => setNomeLivro(e.target.value)}
+                />
+                <h4>Nome do Autor </h4>
+                <input 
+                placeholder="Nome do Autor"
+                value={nomeAutor}
+                onChange={ e => setNomeAutor(e.target.value)}
+                />
+                <h4>Ano de Publicação </h4>
+                <input 
+                placeholder="Ano de Publicação"
+                value={ano}
+                onChange={ e => setAno(e.target.value)}
+                />
               </tr>
             </thead>
             <tbody>
@@ -50,24 +65,7 @@ function App() {
           </section>
         <section>
           <form onSubmit={handleSaveBook}>
-      <input 
-                placeholder="Nome do Livro"
-                value={nomeLivro}
-                onChange={ e => setNomeLivro(e.target.value)}
-                />
-           
-      <input 
-                placeholder="Nome do Autor"
-                value={nomeAutor}
-                onChange={ e => setNomeAutor(e.target.value)}
-                />
 
-      <input 
-                placeholder="Ano de Publicação"
-                value={ano}
-                onChange={ e => setAno(e.target.value)}
-                />
-                
 
       <button className="button" type="submit">Cadastrar</button>
       </form>
